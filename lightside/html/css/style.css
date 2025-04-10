@@ -228,21 +228,58 @@ button {
 
 /* header top section start */
 
-.header_top_section {
-  width: 100%;
-  display: flex;
-  background-color: #641df5;
-  height: auto;
-  padding: 20px 0px;
+/* Sticky Top Header */
+.sticky-top {
+  transition: 0.5s;
+  background: var(--bs-white);
 }
 
-.header_top_main {
-  display: flex;
+/* Topbar Styling */
+.topbar {
+  padding: 10px 0;
+  background-color: #641df5 !important; /* Set the background color to #641df5 */
+}
+/* Add spacing between phone and email links */
+.topbar .d-flex a {
+  margin-right: 20px; /* Adjust the spacing as needed */
 }
 
+.topbar .d-flex a:last-child {
+  margin-right: 0; /* Remove margin for the last element */
+}
+
+/* Text Styling for Topbar */
+.topbar a {
+  color: #ffffff; /* Ensure the text color is white */
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  color: #f70e19; /* Add a hover effect for the text */
+}
+
+/* Social Media Buttons */
+.btn-square {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-secondary);
+  background: var(--bs-light);
+  border-radius: 50%; /* Ensures circular buttons */
+  transition: 0.3s;
+}
+
+.btn-square:hover {
+  color: var(--bs-light);
+  background: var(--bs-primary);
+}
+
+/* Contact Text Styling */
 .call_text {
-  width: 100%;
-  float: left;
   font-size: 16px;
   color: #fefefd;
   font-family: 'Roboto', sans-serif;
@@ -255,49 +292,6 @@ button {
 .call_text a:hover {
   color: #f70e19;
 }
-
-.call_text_1 {
-  width: 100%;
-  float: left;
-  font-size: 16px;
-  color: #fefefd;
-  text-align: right;
-  font-family: 'Roboto', sans-serif;
-}
-
-.call_text_1 a {
-  color: #fefefd;
-}
-
-.call_text_1 a:hover {
-  color: #f70e19;
-}
-
-.call_text_2 {
-  width: 100%;
-  float: left;
-  font-size: 16px;
-  color: #fefefd;
-  text-align: right;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
-
-.call_text_2 a {
-  color: #fefefd;
-}
-
-.call_text_2 a:hover {
-  color: #f70e19;
-}
-
-.padding_left_15 {
-  padding-left: 10px;
-}
-
-
-/* header top section end */
-
 
 /* header section start */
 
@@ -1147,4 +1141,138 @@ textarea#comment.update_mail {
 
 .margin_top90 {
   margin-top: 90px;
+}
+
+
+/* Projects Section */
+.projects_title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+}
+
+.project_card {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project_img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project_name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project_button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project_button:hover {
+  background-color: #1da851;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .project_card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects_title {
+    font-size: 28px;
+  }
+
+  .project_name {
+    font-size: 16px;
+  }
+
+  .project_button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+.sample_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.sample_list li {
+  flex: 1 1 calc(25% - 30px); /* Adjust for 4 items per row */
+  max-width: calc(25% - 30px);
+  text-align: center;
+}
+
+.sample_button {
+  display: block;
+  padding: 15px 20px;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.sample_button:hover {
+  background-color: #1da851;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Sample List */
+@media (max-width: 992px) {
+  .sample_list li {
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sample_list li {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sample_list li {
+    flex: 1 1 100%; /* 1 item per row */
+    max-width: 100%;
+  }
 }
